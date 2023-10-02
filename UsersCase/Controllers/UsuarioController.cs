@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using Microsoft.AspNetCore.Mvc;
 using UsersCase.Data.Dtos;
 
 namespace UsersCase.Controllers
@@ -7,9 +8,9 @@ namespace UsersCase.Controllers
     [Route("[Controller]")]
     public class UsuarioController : ControllerBase
     {
+
         [HttpPost]
-        public IActionResult CadastraUsuario()
-            (CreateUsuarioDto dto)
+        public IActionResult CadastraUsuario(CreateUsuarioDto dto)
         {
             throw new NotImplementedException();
         }

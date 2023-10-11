@@ -14,7 +14,8 @@ namespace UsersCase.Services
             {
                 new Claim("username", usuario.UserName),
                 new Claim("id", usuario.Id),
-                new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString())
+                new Claim(ClaimTypes.DateOfBirth, usuario.DataNascimento.ToString()),
+                new Claim("loginTimestamp", DateTime.UtcNow.ToString()),
             };
 
             var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("kljasdo0liklkjsdfgfoip90p2rid0owf90o9ojw"));
